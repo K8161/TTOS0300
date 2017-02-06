@@ -20,9 +20,34 @@ namespace vko6maT3
     /// </summary>
     public partial class MainWindow : Window
     {
+        double heigth = 0;
+        double width = 0;
+        double wWidth = 0;
+        double wArea = 0;
+        double gArea = 0;
+        double circum = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            // convert inputs to doubles
+            heigth = Convert.ToDouble(windowHeight.Text);
+            width = Convert.ToDouble(windowWidth.Text);
+            wWidth = Convert.ToDouble(woodWidth.Text);
+
+            //count values for area & circumference
+            wArea = heigth * width / 10;
+            gArea = (heigth - wWidth) * (width - wWidth) / 10;
+            circum = heigth + width * 2 / 10;
+
+            //print data
+            windowArea.Text = Convert.ToString(wArea) + "cm²";
+            glassArea.Text = Convert.ToString(gArea) + "cm²";
+            woodCircumference.Text = Convert.ToString(circum) + "cm²";
+
         }
     }
 }
