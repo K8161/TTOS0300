@@ -59,6 +59,19 @@ namespace vko6keT1
 
                 MessageBox.Show(ex.Message);
             }
+
+            /*    
+
+               foreach (object control in StackPanel.Children)
+                   {
+                       if (control is CheckBox)
+                       {
+                           CheckBox checkbox = (CheckBox)control;
+                           if ((bool)checkbox.IsChecked) ItemsControl += checkbox.Content + " ";
+                       }
+                   }
+                   //display
+                   txbList.Text = items; */
         }
     }
 }
