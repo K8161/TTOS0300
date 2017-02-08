@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko6maT2", "vko6maT2\vko6ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko6maT3", "vko6maT3\vko6maT3.csproj", "{D6C2A847-109E-4ED7-A049-3787D978EBF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko6keExamples", "vko6keExamples\vko6keExamples.csproj", "{7A5D9BCC-67A8-429B-92DE-F7934ABEABDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko6keT1", "vko6keT1\vko6keT1.csproj", "{85A9BC7C-30C2-404D-8A8A-BA0D848E014A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{D6C2A847-109E-4ED7-A049-3787D978EBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6C2A847-109E-4ED7-A049-3787D978EBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6C2A847-109E-4ED7-A049-3787D978EBF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5D9BCC-67A8-429B-92DE-F7934ABEABDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5D9BCC-67A8-429B-92DE-F7934ABEABDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5D9BCC-67A8-429B-92DE-F7934ABEABDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5D9BCC-67A8-429B-92DE-F7934ABEABDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85A9BC7C-30C2-404D-8A8A-BA0D848E014A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85A9BC7C-30C2-404D-8A8A-BA0D848E014A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85A9BC7C-30C2-404D-8A8A-BA0D848E014A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85A9BC7C-30C2-404D-8A8A-BA0D848E014A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

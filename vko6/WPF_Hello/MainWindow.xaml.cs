@@ -30,10 +30,11 @@ namespace WPF_Hello
         private void button_Click(object sender, RoutedEventArgs e)
         {
             
-            textBlock.Text = "Hello " + textBox.Text;
-            MessageBox.Show("Terve " + textBox.Text, "Jarko's messut");
+            txbHello.Text = "Hello " + txtName.Text;
+            MessageBox.Show("Terve " + txtName.Text, "Jarko's messut");
             i++;
-            textBlock1.Text = Convert.ToString(i);
+            txbCounter.Text = Convert.ToString(i);
+            txbMessages.Text = "Painoit buttosta";
         }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)

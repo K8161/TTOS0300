@@ -7,17 +7,43 @@
         mc:Ignorable="d"
         Title="Jarko's First WPF App" Height="350" Width="525" FontSize="20">
     <Grid>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="#FFD42E2E" Offset="1"/>
+                <GradientStop Color="#FFE85FE2" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="40" Margin="22,30,0,0" TextWrapping="Wrap" Text="Anna nimesi" VerticalAlignment="Top" Width="134" Background="White"/>
-        <Button x:Name="button" Content="Tervehdi" HorizontalAlignment="Left" Margin="22,96,0,0" VerticalAlignment="Top" Width="134" Click="button_Click"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="22,216,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="134" Height="67"/>
-        <Button x:Name="button_Copy" Content="About" HorizontalAlignment="Left" Margin="22,160,0,0" VerticalAlignment="Top" Width="134" Click="button_Copy_Click"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="327,138,0,0" TextWrapping="Wrap" Text="#" VerticalAlignment="Top" FontSize="50"/>
-
+        <StackPanel Orientation="Horizontal">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFF143EA"/>
+                    <GradientStop Color="#FF8B0E85" Offset="0.567"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <StackPanel>
+                <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="40" Margin="10" TextWrapping="Wrap" Text="Anna nimesi" VerticalAlignment="Top" Width="134" Background="White"/>
+                <Button x:Name="btnSayHello" Content="Tervehdi" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="134" Click="button_Click"/>
+                <Button x:Name="btnExit" Content="Exit" Margin="10" />
+                <Button x:Name="btnAbout" Content="About" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="134" Click="button_Copy_Click"/>
+                <TextBlock x:Name="txbHello" HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="134" Height="67"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock x:Name="txbCounter" HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="#" VerticalAlignment="Top" FontSize="50"/>
+            </StackPanel>
+        </StackPanel>
+        <DockPanel VerticalAlignment="Bottom">
+            <StatusBar>
+                <StatusBarItem>
+                    <TextBlock x:Name="txbMessages" FontSize="12"/>
+                </StatusBarItem>
+            </StatusBar>
+        </DockPanel>
     </Grid>
 </Window>
