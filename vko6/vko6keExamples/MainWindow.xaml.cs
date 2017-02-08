@@ -24,5 +24,27 @@ namespace vko6keExamples
         {
             InitializeComponent();
         }
+
+        private void btnDrawPolyLine_Click(object sender, RoutedEventArgs e)
+        {
+            //määritellään polyline
+            SolidColorBrush scb = new SolidColorBrush();
+            scb.Color = Colors.DarkCyan;
+            Polyline pl = new Polyline();
+            pl.Stroke = scb;
+            pl.StrokeThickness = 3;
+            myGrid.Children.Add(pl); //lisätään polyline-olio gridin lapseksi
+            //arvotaan polylinen pisteet
+            Random rnd = new Random();
+            PointCollection myPoints = new PointCollection();
+            int x, y;
+            for (int i = 0; i < 2; i++)
+            {
+                x = rnd.Next((int)this.Width);
+                y = rnd.Next((int)this.Height);
+                myPoints.Add(new Point(x, y));
+            }
+            pl.Points = myPoints;
+        }
     }
 }

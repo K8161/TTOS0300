@@ -6,13 +6,8 @@
         xmlns:local="clr-namespace:vko6keExamples"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <StackPanel>
-            <TextBlock Margin="10" FontSize="20">How do you like your coffee?</TextBlock>
-            <Button Margin="10">Black</Button>
-            <Button Margin="10">With milk</Button>
-            <Button Margin="10">Latte machiato</Button>
-            <Button Margin="10">Chappuchino</Button>
-        </StackPanel>
+    <Grid x:Name="myGrid">
+        <Button x:Name="btnDrawPolyLine" Content="Create Polyline" Width="100" Height="30" Click="btnDrawPolyLine_Click"/>
+
     </Grid>
 </Window>

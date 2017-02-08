@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace vko6keT1
+namespace vko6keT2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,40 +26,21 @@ namespace vko6keT1
             InitializeComponent();
         }
 
-        private void btnBuy_Click(object sender, RoutedEventArgs e)
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if ((bool)chkMilk.IsChecked)
-                {
-                    txbList.Text += " milk ";
-                }
-
-                if ((bool)chkButter.IsChecked)
-                {
-                    txbList.Text += " butter ";
-                }
-
-                if ((bool)chkBeer.IsChecked)
-                {
-                    txbList.Text += " beer ";
-                }
-
-                if ((bool)chkChicken.IsChecked)
-                {
-                    txbList.Text += " chicken ";
-                }
-
-                if ((bool)chkLemonade.IsChecked)
-                {
-                    txbList.Text += " lemonade ";
-                }
+                string username = txtLogin.Text;
+                string password = txtPassword.Text;
+                Debug.WriteLine(username);
+                Debug.WriteLine(password);
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
+            
         }
     }
 }

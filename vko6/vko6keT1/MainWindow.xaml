@@ -8,13 +8,13 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <StackPanel>
-        <CheckBox x:Name="chcMilk" Content="Milk" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chcButter" Content="Butter" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chcBeer" Content="Beer" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chcChicken" Content="Chicken" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chcLemonade" Content="Lemonade" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkMilk" Content="Milk" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkButter" Content="Butter" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkBeer" Content="Beer" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkChicken" Content="Chicken" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkLemonade" Content="Lemonade" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
             <Button x:Name="btnBuy" Content="Buy" Margin="10,10,450,10" Click="btnBuy_Click"/>
-            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Shopping List:" Margin="10,10,400,10"/>
+            <TextBlock x:Name="txb" TextWrapping="Wrap" Text="Shopping List:" Margin="10,10,400,10"/>
             <TextBlock x:Name="txbList" TextWrapping="Wrap" Text="" Height="56" Margin="0,0,19,0"/>
         </StackPanel>
     </Grid>
