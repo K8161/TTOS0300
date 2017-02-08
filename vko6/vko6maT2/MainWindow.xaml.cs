@@ -21,6 +21,7 @@ namespace vko6maT2
     public partial class MainWindow : Window
     {
         double MoneyValue = 0;
+        double Course = 5.94;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,15 +34,15 @@ namespace vko6maT2
                 if (textBox1.Text == "")
                 {
                     MoneyValue = Convert.ToDouble(textBox.Text);
-                    MoneyValue = MoneyValue * 5.94;
-                    textBox1.Text = Convert.ToString(MoneyValue);
+                    MoneyValue = MoneyValue * Course;
+                    textBox1.Text = Convert.ToString(string.Format("{0:0.00}", MoneyValue));
                 }
 
                 else if (textBox.Text == "")
                 {
                     MoneyValue = Convert.ToDouble(textBox1.Text);
-                    MoneyValue = MoneyValue / 5.94;
-                    textBox.Text = Convert.ToString(MoneyValue);
+                    MoneyValue = MoneyValue / Course;
+                    textBox.Text = Convert.ToString(string.Format("{0:0.00}", MoneyValue));
                 }
 
             }
