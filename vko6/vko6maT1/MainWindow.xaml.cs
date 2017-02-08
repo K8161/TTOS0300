@@ -50,7 +50,7 @@ namespace vko6maT1
                 truck++;
                 textBlock2.Text = Convert.ToString(truck);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
