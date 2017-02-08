@@ -20,7 +20,7 @@ namespace vko6maT3
     /// </summary>
     public partial class MainWindow : Window
     {
-        double heigth = 0;
+        double height = 0;
         double width = 0;
         double wWidth = 0;
         double wArea = 0;
@@ -33,20 +33,46 @@ namespace vko6maT3
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            // convert inputs to doubles
-            heigth = Convert.ToDouble(windowHeight.Text);
-            width = Convert.ToDouble(windowWidth.Text);
-            wWidth = Convert.ToDouble(woodWidth.Text);
+            try
+            {
+                // convert inputs to doubles
+                height = Convert.ToDouble(windowHeight.Text);
+                width = Convert.ToDouble(windowWidth.Text);
+                wWidth = Convert.ToDouble(woodWidth.Text);
+            }
+            catch (Exception)
+            {
 
-            //count values for area & circumference
-            wArea = heigth * width / 10;
-            gArea = (heigth - wWidth) * (width - wWidth) / 10;
-            circum = heigth + width * 2 / 10;
+                MessageBox.Show("Only numbers allowed, fill all fields", "Error");
+            }
 
-            //print data
-            windowArea.Text = Convert.ToString(wArea) + "cm²";
-            glassArea.Text = Convert.ToString(gArea) + "cm²";
-            woodCircumference.Text = Convert.ToString(circum) + "cm²";
+            try
+            {
+                //count values for area & circumference
+                wArea = height * width / 100;
+                gArea = (height - (2 * wWidth)) * (width - (2 * wWidth)) / 100;
+                circum = height + width * 2 / 10;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Couldn't count values :(", "Error");
+            }
+
+
+            try
+            {
+                //print data
+                windowArea.Text = Convert.ToString(wArea) + "cm²";
+                glassArea.Text = Convert.ToString(gArea) + "cm²";
+                woodCircumference.Text = Convert.ToString(circum) + "cm²";
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error");
+            }
+            
 
         }
     }

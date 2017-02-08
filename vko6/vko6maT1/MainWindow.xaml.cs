@@ -29,15 +29,33 @@ namespace vko6maT1
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            car++;
-            textBlock1.Text = Convert.ToString(car);
+            try
+            {
+                car++;
+                textBlock1.Text = Convert.ToString(car);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
 
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            truck++;
-            textBlock2.Text = Convert.ToString(truck);
+            try
+            {
+                truck++;
+                textBlock2.Text = Convert.ToString(truck);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

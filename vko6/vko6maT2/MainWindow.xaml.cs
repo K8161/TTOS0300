@@ -28,19 +28,29 @@ namespace vko6maT2
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text != "Eurot")
+            try
             {
-                MoneyValue = Convert.ToDouble(textBox.Text);
-                MoneyValue = MoneyValue * 5.94;
-                textBox1.Text = Convert.ToString(MoneyValue);
-            }
+                if (textBox1.Text == "")
+                {
+                    MoneyValue = Convert.ToDouble(textBox.Text);
+                    MoneyValue = MoneyValue * 5.94;
+                    textBox1.Text = Convert.ToString(MoneyValue);
+                }
 
-            else if (textBox1.Text != "Markat")
-            {
-                MoneyValue = Convert.ToDouble(textBox1.Text);
-                MoneyValue = MoneyValue / 5.94;
-                textBox.Text = Convert.ToString(MoneyValue);
+                else if (textBox.Text == "")
+                {
+                    MoneyValue = Convert.ToDouble(textBox1.Text);
+                    MoneyValue = MoneyValue / 5.94;
+                    textBox.Text = Convert.ToString(MoneyValue);
+                }
+
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Only numbers allowed", "Error");
+            }
+           
 
         }
     }
