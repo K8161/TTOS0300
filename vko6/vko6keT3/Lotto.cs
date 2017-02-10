@@ -8,12 +8,14 @@ namespace vko6keT3
 {
      public class Lotto
     {
+        public string s;
 
         public void lottomachine()
         {
+
             int[] lottoline = new int[7]; /*Alkiot 0-6*/
             int x, i, j, help, amount, linenumber = 0;
-            string s;
+            
             bool arvottu = false;
             Random rand = new Random();
 

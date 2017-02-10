@@ -39,7 +39,7 @@ namespace vko6keT3
             {
                 basiclotto.lottomachine();
 
-                txbResult += 
+               // txbResult += s;
             } while (amount > 0);
         }
 
