@@ -29,7 +29,7 @@ namespace vko6keT3
 
         private void btnDraw_Click(object sender, RoutedEventArgs e)
         {
-            lotterytype = cmbChoose.SelectedValue.ToString();
+          //  lotterytype = cmbChoose.SelectedValue.ToString();
             amount = Convert.ToInt32(txtDraw.Text);
 
             Lotto basiclotto = new Lotto();
@@ -39,7 +39,7 @@ namespace vko6keT3
             {
                 basiclotto.lottomachine();
 
-               // txbResult += s;
+                txbResult.Text += basiclotto.s;
             } while (amount > 0);
         }
 
