@@ -29,20 +29,81 @@ namespace vko6keT3
 
         private void btnDraw_Click(object sender, RoutedEventArgs e)
         {
-          //  lotterytype = cmbChoose.SelectedValue.ToString();
+            //  lotterytype = cmbChoose.SelectedValue.ToString();
+            lotterytype = "Lotto";
             amount = Convert.ToInt32(txtDraw.Text);
+            txbResult.Text += "\n";
 
-            Lotto basiclotto = new Lotto();
-
-
-            do
+            // Basic lottery type
+            if (lotterytype == "Lotto")
             {
-                basiclotto.lottomachine();
+                try
+                {
+                    Lotto basiclotto = new Lotto(); // create basiclotto object
+                    int rowNumber = 1;              
+                    for (int y = 0; y < amount; y++)
+                    {
+                        basiclotto.lottomachine(); // times method is used is dependant on user input
 
-                txbResult.Text += basiclotto.s;
-            } while (amount > 0);
+                        txbResult.Text += "Row " + rowNumber + ": " + basiclotto.s; // print lotteryrow
+                        rowNumber++;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            //Viking lotto, works basically just like basic lottery but little difference in numbers
+            if (lotterytype == "Viking Lotto")
+            {
+                try
+                {
+                    VikingLotto vikinglotto = new VikingLotto();
+                    int rowNumber = 1;
+                    for (int y = 0; y < amount; y++)
+                    {
+                        vikinglotto.lottomachine();
+
+                        txbResult.Text += "Row " + rowNumber + ": " + vikinglotto.s;
+                        rowNumber++;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            //Eurojackpot, works basically just like basic lottery but little difference in numbers plus has two star numbers
+            if (lotterytype == "EuroJackpot")
+            {
+                try
+                {
+                    Eurojackpot eurojackpot = new Eurojackpot();
+                    int rowNumber = 1;
+                    for (int y = 0; y < amount; y++)
+                    {
+                        eurojackpot.lottomachine();
+
+                        txbResult.Text += "Row " + rowNumber + ": " + eurojackpot.s;
+                        rowNumber++;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
-
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txbResult.Text = "";
+        }
     }
 }

@@ -13,9 +13,11 @@
         <TextBlock x:Name="txbDraw" HorizontalAlignment="Left" Margin="76,85,0,0" TextWrapping="Wrap" Text="Number of Draws" VerticalAlignment="Top"/>
         <TextBox x:Name="txtDraw" HorizontalAlignment="Left" Height="23" Margin="364,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnDraw" Content="Draw" HorizontalAlignment="Left" Margin="138,172,0,0" VerticalAlignment="Top" Width="75" Click="btnDraw_Click"/>
-        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="310,172,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBlock x:Name="txbResult" HorizontalAlignment="Left" Margin="42,222,0,0" TextWrapping="Wrap" Text="Lottery lines" VerticalAlignment="Top" Height="76" Width="442"/>
         
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="310,172,0,0" VerticalAlignment="Top" Width="75" Click="btnClear_Click"/>
+        <ScrollViewer Margin="20,212,22,10">
+            <TextBlock x:Name="txbResult" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Lottery lines" VerticalAlignment="Top" Height="97" Width="475" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        </ScrollViewer>
 
     </Grid>
 </Window>
