@@ -42,10 +42,15 @@
             <TextBlock Text="Valitse suosikkijoukkueesi (olio-kokoelma)" Margin="10, 0, 10,0"/>
             <ComboBox x:Name="cmbTeams"></ComboBox>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right" Width="165" Height="323" Background="#FFFD8B19">
+        <StackPanel x:Name="spRight"  HorizontalAlignment="Right" Width="165" Height="323" Background="#FFFD8B19">
 
             <TextBlock x:Name="txbCollection" Margin="10" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Binding to collection" VerticalAlignment="Top"/>
-            <Button x:Name="btnCollection" Margin="10" Content="Bind to object collection"/>
+            <Button x:Name="btnBind" Margin="10" Content="Bind to object collection" Click="btnBind_Click"/>
+            <TextBox x:Name="txtName" Text="{Binding Path=Name}" Margin="10, 0, 10, 0"/>
+            <TextBox x:Name="txtCity" Text="{Binding Path=City}" Margin="10, 0, 10, 0"/>
+            <Button x:Name="btnForward" Content="Seuraava" Click="btnForward_Click"/>
+            <Button x:Name="btnBackward" Content="Edellinen" Click="btnBackward_Click"/>
+
 
         </StackPanel>
        
