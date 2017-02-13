@@ -11,6 +11,7 @@ namespace vko6keT3
         public string s;
         int eurojackpotnumber;
         int eurojackpotstarnumber;
+        int holder;
 
         Random rnd = new Random();
 
@@ -28,25 +29,27 @@ namespace vko6keT3
 
                 eurojackpotrow.Sort();
 
-                for (int x = 0; x < eurojackpotrow.Count; x++)
-                {
-                    s += eurojackpotrow[x] + ", ";
-                }
+                
 
-                List<int> eurojackpotstarnumbers = new List<int>();
+                //add starnumbers to the end of row
                 do
                 {
                     eurojackpotstarnumber = rnd.Next(1, 11);
-                    if (!eurojackpotstarnumbers.Contains(eurojackpotstarnumber)) eurojackpotrow.Add(eurojackpotstarnumber);
-                } while (eurojackpotstarnumbers.Count < 2);
+                    if (!eurojackpotrow.Contains(eurojackpotstarnumber)) eurojackpotrow.Add(eurojackpotstarnumber);
+                } while (eurojackpotrow.Count < 7);
 
-                eurojackpotstarnumbers.Sort();
-
-                for (int y = 0; y < eurojackpotstarnumbers.Count - 1; y++)
+         /*       if (eurojackpotrow[7] > eurojackpotrow[6])
                 {
-                    s += eurojackpotrow[y] + ", ";
+                    holder = eurojackpotrow[7];
+                    eurojackpotrow[7] = eurojackpotrow[6];
+                    eurojackpotrow[6] = holder;
+                } */
+
+                for (int x = 0; x < eurojackpotrow.Count - 1; x++)
+                {
+                    s += eurojackpotrow[x] + ", ";
                 }
-                s += eurojackpotrow[1];
+                s += eurojackpotrow[6];
                 s += "\n";
 
 

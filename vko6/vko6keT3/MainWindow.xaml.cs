@@ -25,12 +25,15 @@ namespace vko6keT3
         public MainWindow()
         {
             InitializeComponent();
+            cmbChoose.Items.Add("Lotto");
+            cmbChoose.Items.Add("Viking Lotto");
+            cmbChoose.Items.Add("EuroJackpot");
         }
 
         private void btnDraw_Click(object sender, RoutedEventArgs e)
         {
-            //  lotterytype = cmbChoose.SelectedValue.ToString();
-            lotterytype = "Lotto";
+              lotterytype = cmbChoose.SelectedValue.ToString();
+         //   lotterytype = "EuroJackpot";
             amount = Convert.ToInt32(txtDraw.Text);
             txbResult.Text += "\n";
 
@@ -61,7 +64,7 @@ namespace vko6keT3
             {
                 try
                 {
-                    VikingLotto vikinglotto = new VikingLotto();
+                    VikingLotto vikinglotto = new VikingLotto(); // create viking lotto object
                     int rowNumber = 1;
                     for (int y = 0; y < amount; y++)
                     {
@@ -83,7 +86,7 @@ namespace vko6keT3
             {
                 try
                 {
-                    Eurojackpot eurojackpot = new Eurojackpot();
+                    Eurojackpot eurojackpot = new Eurojackpot(); // create eurojackpot object
                     int rowNumber = 1;
                     for (int y = 0; y < amount; y++)
                     {
