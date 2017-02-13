@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko7maExamples", "vko7maExamples\vko7maExamples.csproj", "{59FA763A-2F14-4527-9249-19894E8B9503}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko7maExamplesDataBinding", "vko7maExamples\vko7maExamplesDataBinding.csproj", "{59FA763A-2F14-4527-9249-19894E8B9503}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Demo_X3", "WPF_Demo_X3\WPF_Demo_X3.csproj", "{2B246CF4-094D-4A11-895B-F6ACA2CF126A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{59FA763A-2F14-4527-9249-19894E8B9503}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59FA763A-2F14-4527-9249-19894E8B9503}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59FA763A-2F14-4527-9249-19894E8B9503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B246CF4-094D-4A11-895B-F6ACA2CF126A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B246CF4-094D-4A11-895B-F6ACA2CF126A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B246CF4-094D-4A11-895B-F6ACA2CF126A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B246CF4-094D-4A11-895B-F6ACA2CF126A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

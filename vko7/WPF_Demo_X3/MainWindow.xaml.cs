@@ -13,20 +13,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace vko7maExamplesDataBinding
+namespace WPF_Demo_X3
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string AppName { get; set; }
-
         public MainWindow()
         {
             InitializeComponent();
-            AppName = "Oh boy, what an app!";
-            textBlock2.DataContext = this;
+            IniMyStuff();
+        }
+        private void IniMyStuff()
+        {
+            //tänne kootusti omien kontrollien alustukset
+            List<string> muuvit = new List<string>();
+            muuvit.Add("Halloween");
+            muuvit.Add("Jaws");
+            muuvit.Add("Star Wars");
+            cmbMovies.ItemsSource = muuvit;
+
+            //haetaan SM-Liiga-joukkueet
+            JAMK.ICT.HockeyLeague liiga = new JAMK.ICT.HockeyLeague();
+            liiga.GetTeams();
         }
     }
 }
