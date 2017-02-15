@@ -52,7 +52,7 @@ namespace WPF_Demo_X3
         {
             //määritellään Stackpanelin DataContext
             //Demo1: Datacontextina on olio
-            HockeyTeam tiimi = new HockeyTeam("KeuPa", "Keuruu");
+            //HockeyTeam tiimi = new HockeyTeam("KeuPa", "Keuruu");
             //spRight.DataContext = tiimi;
             //Demo2: kytketään olio-kokoelman 1. olioon
             spRight.DataContext = joukkueet[counter];
@@ -60,22 +60,40 @@ namespace WPF_Demo_X3
 
         private void btnForward_Click(object sender, RoutedEventArgs e)
         {
-            if (counter > joukkueet.Count)
+            if (counter < joukkueet.Count - 1)
+            {
+                counter++;
+                spRight.DataContext = joukkueet[counter];
+            }
+            
+            else
             {
                 counter = 0;
+                spRight.DataContext = joukkueet[counter];
             }
-            counter++;
-            spRight.DataContext = joukkueet[counter];
         }
 
         private void btnBackward_Click(object sender, RoutedEventArgs e)
         {
-            if (counter < 0)
+            if (counter > 0)
             {
-                counter = joukkueet.Count;
+                counter--;
+                spRight.DataContext = joukkueet[counter];
             }
-            counter--;
-            spRight.DataContext = joukkueet[counter];
+
+            else
+            {
+                counter = joukkueet.Count -1;
+                spRight.DataContext = joukkueet[counter];
+            }
+
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            HockeyTeam tiimi = new HockeyTeam(txtAddName.Text,txtAddCity.Text);
+            joukkueet.Add(tiimi);
+
         }
     }
 }
