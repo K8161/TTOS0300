@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko7maExamplesDataBinding",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Demo_X3", "WPF_Demo_X3\WPF_Demo_X3.csproj", "{2B246CF4-094D-4A11-895B-F6ACA2CF126A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vko7T3", "vko7T3\vko7T3.csproj", "{8B17B68F-CD8E-4951-B512-50835D125D05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2B246CF4-094D-4A11-895B-F6ACA2CF126A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B246CF4-094D-4A11-895B-F6ACA2CF126A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B246CF4-094D-4A11-895B-F6ACA2CF126A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B17B68F-CD8E-4951-B512-50835D125D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B17B68F-CD8E-4951-B512-50835D125D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B17B68F-CD8E-4951-B512-50835D125D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B17B68F-CD8E-4951-B512-50835D125D05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
