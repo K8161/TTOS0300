@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads_Demo", "Threads_Demo\Threads_Demo.csproj", "{F8A6E995-4BD0-4DBA-A840-FC46CE7FF3B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFVRtrains", "WPFVRtrains\WPFVRtrains.csproj", "{1A36F159-39EA-4FD6-8DFD-C13B62FBC9B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F8A6E995-4BD0-4DBA-A840-FC46CE7FF3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8A6E995-4BD0-4DBA-A840-FC46CE7FF3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8A6E995-4BD0-4DBA-A840-FC46CE7FF3B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A36F159-39EA-4FD6-8DFD-C13B62FBC9B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A36F159-39EA-4FD6-8DFD-C13B62FBC9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A36F159-39EA-4FD6-8DFD-C13B62FBC9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A36F159-39EA-4FD6-8DFD-C13B62FBC9B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

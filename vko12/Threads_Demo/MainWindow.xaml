@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Threads_Demo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Simple Thread Demo" Height="350" Width="525">
     <Grid>
-        <Button x:Name="btnLongWork" Content="Do Long Work" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="98"/>
-        <Button x:Name="btnHello" Content="Say Hello" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="98" RenderTransformOrigin="-0.208,0.281"/>
-        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="23" Margin="10,60,0,0" TextWrapping="Wrap" Text="[Message comes here]" VerticalAlignment="Top" Width="236"/>
-
+        <StackPanel>
+        <Button x:Name="btnWork" Content="Do Long Work" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Width="98" Click="btnWork_Click"/>
+        <Button x:Name="btnFire" Content="Fire!" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Width="98" Click="btnFire_Click"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="23" Margin="5" TextWrapping="Wrap" Text="[Message comes here]" VerticalAlignment="Top" Width="236"/>
+        </StackPanel>
     </Grid>
 </Window>
