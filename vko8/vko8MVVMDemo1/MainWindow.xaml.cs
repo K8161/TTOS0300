@@ -24,7 +24,18 @@ namespace MVVMDemo
         public MainWindow()
         {
             InitializeComponent();
+            //kovakoodatut oppilaat
             svmo.LoadStudents();
+            try
+            {
+                //oppilaat tietokannasta
+                svmo.LoadStudentsFromMysql();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
         private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
         {
